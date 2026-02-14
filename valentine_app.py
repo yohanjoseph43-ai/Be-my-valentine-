@@ -142,10 +142,12 @@ elif st.session_state.step == "memories":
     with col2:
         st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
         st.write("📸 Visual Archives")
-        c1, c2 = st.columns("Ay1.jpeg", caption="Special Memory✨")
+        c1, c2 = st.columns(2)
+        c1.image("Ay1.jpeg", caption="Special Memory✨")
         c2.image("Ay2.jpeg", caption="My Fav💝")
         if st.button("Analyze Connection ➡️"): move_to("reasons")
         st.markdown("</div>", unsafe_allow_html=True)
+
 
 # --- STEP 5: REASONS WHY (With Headers) ---
 elif st.session_state.step == "reasons":
